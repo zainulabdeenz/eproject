@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Carousel Template · Bootstrap v5.3</title>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        .main-img {
+            width: 140px;
+            height: 140px;
+        }
+
+        .big-img {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+
+
+    <header data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <img src="./images/logo.png" alt="" width="50" class="ms-2">
+                <a class="navbar-brand ms-4" href="#">BAKERZ BITE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./gallary.html">Gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  active" href="./produt.html">Products</a>
+                        </li>
+
+                    </ul>
+                    <p class="text-white" style="border: 3px solid green; padding: 2px;margin-top: 10px;">Total Visitors: <span id="visitorCount">0</span></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <!-- products section -->
+        <!-- cakes product start -->
+
+        <div class="album py-5 bg-body-tertiary ">
+            <div class="container">
+                <h2 class="text-center mt-5"> Products Section</h2><br><br>
+                <h3 class="mb-4"><u><b>CAKES</u></b></h3>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./images/cake 8.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Strawberry Cake</h5> "The strawberry cake specifications include a moist and fluffy two-layer cake made with fresh strawberry puree, paired with a luscious strawberry frosting, creating a delightful dessert bursting with fruity flavor."</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal1">Order
+                                        Now</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/cake 8.jpg" alt="" class="w-100 h-100">
+                                        <p> <h5>Strawberry Cake</h5> "The strawberry cake specifications include a moist and fluffy two-layer cake made with fresh strawberry puree, paired with a luscious strawberry frosting, creating a delightful dessert bursting with fruity flavor."</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./images/cakes 9.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Chocolate Cake</h5> "The chocolate cake specifications outline a rich and decadent dessert featuring layers of moist cocoa-infused cake, sandwiched together with a velvety chocolate creating a heavenly treat for chocolate enthusiasts."</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal2">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/cakes 9.jpg" alt="" class="w-100 h-100">
+                                        <p> <h5>Chocolate Cake</h5> "The chocolate cake specifications outline a rich and decadent dessert featuring layers of moist cocoa-infused cake, creating a heavenly treat for chocolate enthusiasts."</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./images/cakes 10.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Cream Cake</h5> "The cream cake specifications call for a delicate and light sponge cake layered with a luxurious and silky pastry cream, resulting in a delightful confection that balances sweetness with a melt-in-your-mouth texture Lorem ipsum dolor sit amet."
+
+
+
+
+                                </p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal3">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/cakes 10.jpg" alt="" class="w-100 h-100">
+                                        <p> <h5>Cream Cake</h5> "The cream cake specifications call for a delicate and light sponge cake layered with a luxurious and silky pastry cream, resulting in a delightful confection that balances sweetness with a melt-in-your-mouth texture."
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cake product end -->
+                    <!-- cookies product start -->
+                    <div class="col">
+                        <h3><b><u>COOKIES</u></b></h3> <br><br>
+                        <div class="card shadow-sm">
+                            <img src="./images/cookies 8.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Chocolate Flavor</h5> The chocolate-flavored cookies specifications describe scrumptious treats featuring a rich cocoa-infused dough, loaded with premium chocolate chips, ensuring a delightful blend of deep, chocolatey flavor.</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal4">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/cookies 8.jpg" alt="" class="w-100 h-100">
+                                        <p> <h5>Chocolate Flavor</h5> The chocolate-flavored cookies specifications describe scrumptious treats featuring a rich cocoa-infused dough, loaded with premium chocolate chips, ensuring a delightful blend of deep, chocolatey flavor and gooey, melty indulgence with every bite.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <br><br><br><br>
+                        <div class="card shadow-sm">
+                            <img src="./images/cookies 9.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Pista Flavor</h5> The Pista-flavored cookies specifications outline a delectable treat infused with the distinct essence of roasted pistachios, creating a delightful balance of nutty richness and buttery sweetness in every bite.</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal5">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/cookies 9.jpg" alt="" class="w-100 h-100">
+                                        <p> <h5>Pista Flavor</h5> The Pista-flavored cookies specifications outline a delectable treat infused with the distinct essence of roasted pistachios, creating a delightful balance of nutty richness and buttery sweetness in every bite.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <br><br><br><br>
+                        <div class="card shadow-sm">
+                            <img src="./images/cookies 10.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Strawberry Flavor</h5> The Strawberry cookies specifications detail a batch of delightful treats, featuring a chewy and buttery cookie base generously studded with dried strawberry pieces, offering a burst of fruity sweetness in every bite.
+
+
+
+
+                                </p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal6">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/cookies 10.jpg" alt="" class="w-100 h-100">
+                                        <p><h5>Strawberry Flaver</h5> The Strawberry cookies specifications detail a batch of delightful treats, featuring a chewy and buttery cookie base generously studded with dried strawberry pieces, offering a burst of fruity sweetness in every bite.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cookies product end -->
+                    <!-- pastries product start -->
+                    <div class="col">
+                        <h3><b><u>PASTRIES</u></b></h3> <br><br>
+                        <div class="card shadow-sm">
+                            <img src="./images/pastries 8.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Cholocate Pastry</h5> The chocolate pastries specifications unveil a heavenly dessert composed of layers of flaky pastry, generously filled with a velvety and decadent chocolate ganache, creating an indulgent masterpiece that satisfies every chocolate lover's craving.</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal7">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/pastries 8.jpg" alt="" class="w-100 h-100">
+                                        <p><h5>Cholocate Pastry</h5> The chocolate pastries specifications unveil a heavenly dessert composed of layers of flaky pastry, generously filled with a velvety and decadent chocolate ganache, creating an indulgent masterpiece that satisfies every chocolate lover's craving.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <br><br><br><br>
+                        <div class="card shadow-sm">
+                            <img src="./images/pastries 9.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Mango Pastry</h5> The mango pastries specifications highlight a tropical delight, featuring layers of light pastry dough filled fruity mango puree, elegantly topped with a fresh mango glaze, delivering a burst of sunshine and sweetness in each delectable bite.</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal8">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/pastries 9.jpg" alt="" class="w-100 h-100">
+                                        <p><h5>Mango Pastry</h5> The mango pastries specifications highlight a tropical delight, featuring layers of light pastry dough filled with a smooth and fruity mango puree, elegantly topped with a fresh mango glaze, delivering a burst of sunshine and sweetness in each delectable bite.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <br><br><br><br>
+                        <div class="card shadow-sm">
+                            <img src="./images/pastries 10.jpg" alt="" width="100%" height="225">
+                            <div class="card-body">
+                                <p class="card-text"> <h5>Strawberry Pastry</h5> The strawberry pastries specifications describe delectable confections featuring layers of delicate sponge cake, filled with a luscious strawberry cream, offering a delightful fusion of fruity sweetness and melt-in-your-mouth goodness.</p>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-warning fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal9">Order
+                                        Now</button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <img src="./images/pastries 10.jpg" alt="" class="w-100 h-100">
+                                        <p> <h5>Strawberry Pastry</h5> The strawberry pastries specifications describe delectable confections featuring layers of delicate sponge cake, filled with a luscious strawberry cream, and adorned with a glossy strawberry glaze, offering a delightful fusion of fruity sweetness and melt-in-your-mouth goodness.</p>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- products section ends -->
+
+        <!-- FOOTER -->
+        <footer class="container bg-black text-white p-5">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy; 2017–2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+        <!-- footer ends -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script>
+            
+            function incrementVisitorCount() {
+                if (typeof(Storage) !== "undefined") {
+                    let count = localStorage.getItem("visitorCount");
+                    if (!count) {
+                        count = 0;
+                    }
+                    count++;
+                    localStorage.setItem("visitorCount", count);
+                    document.getElementById("visitorCount").textContent = count;
+                } else {
+              console.log("Local storage is not supported in this browser.");
+                }
+            }
+            window.onload = incrementVisitorCount;
+        </script>
+        <!-- scrooling bar start -->
+        
+    <div class="container text-center bg-dark text-light">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div id="date" class="mb-3">Date: </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div id="time" class="mb-3">Time: </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div id="location" class="mb-3">Location: </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function updateTicker() {
+    const dateElement = document.getElementById("date");
+    const timeElement = document.getElementById("time");
+    const locationElement = document.getElementById("location");
+
+    // Get current date and time
+    const currentDate = new Date();
+    const dateString = currentDate.toDateString();
+    const timeString = currentDate.toLocaleTimeString();
+
+    // Check if the location has not been fetched before
+    if (!localStorage.getItem("location")) 
+    {
+        // Get geolocation (latitude and longitude)
+            if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(updateLocation);
+        }
+
+            function updateLocation(position) {
+            const latitude = position.coords.latitude.toFixed(2);
+            const longitude = position.coords.longitude.toFixed(2);
+
+
+                // Save location to local storage
+                localStorage.setItem("location", "Location: " + latitude + ", " + longitude);
+            };
+        }
+    
+        // Retrieve and update location from local storage to your website
+        const locationString = localStorage.getItem("location");
+
+        // Update ticker content
+        dateElement.innerHTML = "Date: " + dateString;
+        timeElement.innerHTML = "Time: " + timeString;
+        locationElement.innerHTML = locationString;
+            }
+
+        // Update the ticker every second
+        setInterval(updateTicker, 1000);
+
+        // Initial update
+        updateTicker();
+
+</script>
+
+        <!-- scrooling bar end -->
+
+</body>
+
+</html>

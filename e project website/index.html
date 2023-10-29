@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Carousel Template · Bootstrap v5.3</title>
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        .main-img {
+            width: 140px;
+            height: 140px;
+        }
+
+        .big-img {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+
+    <header data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <img src="./images/logo.png" alt="" width="50" class="ms-2">
+                <a class="navbar-brand ms-4" href="#">BAKERZ BITE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./gallary.html">Gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./produt.html">Products</a>
+                        </li>
+
+                    </ul>
+                    <p class="text-white" style="border: 3px solid green; padding: 2px;margin-top: 10px;">Total Visitors: <span id="visitorCount">0</span></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/cake 1.jpg" alt="" class="h-100 w-100">
+                    <div class="container">
+                        <div class="carousel-caption"> <!-- text-start calass remove here -->
+
+                            <h1>Example headline.</h1>
+                            <p class="opacity-75">Some representative placeholder content for the first slide of the
+                                carousel.</p>
+                           >
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/cookies 1.jpg" alt="" class="h-100 w-100">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Some representative placeholder content for the second slide of the carousel.</p>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/pastries 1.jpg" alt="" class="h-100 w-100">
+                    <div class="container">
+                        <div class="carousel-caption"> <!-- text-end calass remove here -->
+                            <h1>One more for good measure.</h1>
+                            <p>Some representative placeholder content for the third slide of this carousel.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row mt-5">
+                <div class="col-lg-4">
+
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="./images/images 2.jpg" alt="" class="main-img rounded-circle">
+                        <h2 class="fw-normal"><u><b>CAKE</b></u></h2>
+                        <p> <b> Whether enjoyed warm with a scoop of vanilla ice cream or savored slowly with a cup of coffee, every bite is a blissful escape into a world of sweet, chocolatey perfection. It's a timeless classic that brings joy to both young and old, making any occasion extra special with its irresistible charm. </b></p>
+                       
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="./images/cookies 2.jpg" alt="" class="main-img rounded-circle">
+                        <h2 class="fw-normal"> <u><b>COOKIES</b></u></h2>
+                        <p> <b>
+                            Cookies are tiny bundles of delight, each bite brimming with nostalgia and comfort. Whether they're warm and gooey right out of the oven or crisp and dunked into a glass of milk, cookies have a universal appeal making them the perfect treat for every mood andthat transcends generations. </b></p>
+                        >
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="./images/pastries 9.jpg" alt="" class="main-img rounded-circle">
+                        <h2 class="fw-normal"> <u> <b> PASTRIES</b></u></h2>
+                        <p><b>
+                            Pastries are delightful, bite-sized treasures of the culinary world. With their flaky, buttery layers and a range of sweet or savory fillings, they offer a burst of flavor and texture in every bite. Whether it's a warm, golden croissant for breakfast or an elegant fruit danish for dessert, pastries have an innate ability.  </b></p>
+                       
+                    </div>
+
+                </div>
+
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1"> <h1><u>CAKES</u></h1> <span
+                            class="text-body-secondary"></span></h2>
+                    <p class="lead"> <b> <h4> <u> Ingredients: </u></h4><br>  <br> 
+                        <h4>For the Cake : </h4><br> 
+                        <ul>
+
+                       <li>  2 1/2 cups all-purpose flour </li> 
+                       <li> 2 1/2 tsp baking powder </li>
+                       <li>1/2 tsp baking soda </li>
+                       <li>1/2 tsp salt </li> 
+                       <li>1 1/2 cups granulated sugar </li> 
+                       <li> 1/2 cup unsalted butter, softened </li> 
+                        <li> 3 large eggs </li> 
+                        <li>2 tsp pure vanilla extract </li> 
+                         <li>  1 1/4 cups whole milk  </li> </b></p>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="./images/cake 5.jpg" alt="" class="big-img img-fluid">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img src="./images/cookies 3.jpg" alt="" class="big-img img-fluid">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1"><h1><u>COOKIES</u></h1><span
+                            class="text-body-secondary"></span></h2>
+                    <p class="lead">  <b> <h4> <u> Ingredients: </u></h4><br>  <br>
+                        
+
+                        <h4>For the Cookies : </h4><br>       
+
+                 <ul>       
+                <li>2 1/4 cups all-purpose flour</li>
+                <li>1/2 teaspoon baking soda</li>
+                <li>1 cup unsalted butter, at room temperature</li>
+                <li>1/2 cup granulated sugar</li>
+                <li>1 cup packed light-brown sugar</li>
+                <li>1 teaspoon salt</li>
+                <li>2 teaspoons pure vanilla extract</li>
+                <li>2 large eggs</li>
+                <li>2 cups semisweet and/or milk chocolate chips</li>
+            </ul> </p>
+                </div>
+
+            </div>
+
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1"><h1><u>PASTRIES</u></h1> <span
+                            class="text-body-secondary"></span></h2>
+                    <p class="lead">  <b> <h4> <u> Ingredients: </u></h4><br>  <br>
+                        <h4>For the Pastries :</h4> <br>
+                        <ul>
+                <li>2 1/2 cups all-purpose flour</li>
+                <li>1 teaspoon salt</li>
+                <li>2 tablespoons granulated sugar (for sweet pastries, optional)</li>
+                <li>1 cup (2 sticks) unsalted butter, cold </li>
+                <li>1/2 cup cold water</li>
+                <li>1 tablespoon lemon juice or white vinegar (for flakiness)</li></b>
+                </ul> 
+               
+            </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="./images/pastries 10.jpg" alt="" class="big-img img-fluid">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+        <!-- timer -->
+
+
+
+        <!-- FOOTER -->
+        <footer class="container bg-black text-white p-5">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy; 2017–2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script>
+            
+            function incrementVisitorCount() {
+                if (typeof(Storage) !== "undefined") {
+                    let count = localStorage.getItem("visitorCount");
+                    if (!count) {
+                        count = 0;
+                    }
+                    count++;
+                    localStorage.setItem("visitorCount", count);
+                    document.getElementById("visitorCount").textContent = count;
+                } else {
+              console.log("Local storage is not supported in this browser.");
+                }
+            }
+            window.onload = incrementVisitorCount;
+        </script>
+        <!-- scrooling bar start -->
+        
+    <div class="container text-center bg-dark text-light">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div id="date" class="mb-3">Date: </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div id="time" class="mb-3">Time: </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div id="location" class="mb-3">Location: </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function updateTicker() {
+    const dateElement = document.getElementById("date");
+    const timeElement = document.getElementById("time");
+    const locationElement = document.getElementById("location");
+
+    // Get current date and time
+    const currentDate = new Date();
+    const dateString = currentDate.toDateString();
+    const timeString = currentDate.toLocaleTimeString();
+
+    // Check if the location has not been fetched before
+    if (!localStorage.getItem("location")) 
+    {
+        // Get geolocation (latitude and longitude)
+            if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(updateLocation);
+        }
+
+            function updateLocation(position) {
+            const latitude = position.coords.latitude.toFixed(2);
+            const longitude = position.coords.longitude.toFixed(2);
+
+
+                // Save location to local storage
+                localStorage.setItem("location", "Location: " + latitude + ", " + longitude);
+            };
+        }
+    
+        // Retrieve and update location from local storage to your website
+        const locationString = localStorage.getItem("location");
+
+        // Update ticker content
+        dateElement.innerHTML = "Date: " + dateString;
+        timeElement.innerHTML = "Time: " + timeString;
+        locationElement.innerHTML = locationString;
+            }
+
+        // Update the ticker every second
+        setInterval(updateTicker, 1000);
+
+        // Initial update
+        updateTicker();
+
+</script>
+
+        <!-- scrooling bar end -->
+
+</body>
+
+</html>
